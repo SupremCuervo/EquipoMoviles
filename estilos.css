@@ -1,0 +1,69 @@
+/* Estilos generales para ambos archivos HTML (Boton.html y Hola mundo.html) */
+body {
+    /* Centra el contenido horizontal y verticalmente en la pantalla */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
+    margin: 0; /* Elimina el margen predeterminado del body */
+
+    /* Importante: para que la fuente Open Sans funcione, debes enlazarla en el <head> de tus HTML:
+       <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
+    */
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Estilos para "Hola mundo.html" (Imagen 2: Fondo #d4b, Texto: Hola Mundo :) */
+
+/* Usamos el ID #Hola para el H1, y el body para el color de fondo de esta página */
+/* El color de fondo #d4b es un amarillo oscuro */
+#Hola {
+    font-size: 77px;
+    color: black;
+    /* Aplicamos negrita (bold) y cursiva (italic) */
+    font-weight: bold;
+    font-style: italic;
+    text-align: center; /* Asegura que si el texto ocupa varias líneas se centre */
+    margin-top: -50px; /* Ajuste manual para centrar visualmente el texto */
+    line-height: 1.2; /* Espaciado entre líneas */
+}
+
+/* Estilo del body exclusivo para el archivo "Hola mundo.html" */
+body:has(#Hola) {
+    background-color: #d4b300;
+}
+
+/* ---------------------------------------------------------------------------------- */
+
+/* Estilos para "Boton.html" (Imagen 1: Fondo #baba200, Título: Haz click, Botón: Click) */
+
+/* Estilo del body exclusivo para el archivo "Boton.html" */
+body:has(.boton1) {
+    background-color: #baba20; /* El color de la imagen parece ser #baba20 (un amarillo mostaza) */
+}
+
+/* Estilos para el título "Haz click" (la etiqueta <p>) */
+body:has(.boton1) p {
+    font-size: 32px;
+    color: black;
+    margin-bottom: 20px; /* Espacio entre el texto y el botón */
+    font-weight: normal;
+}
+
+/* Estilos para el botón "Click" (la etiqueta <button> con clase .boton1) */
+.boton1 {
+    font-size: 60px;
+    color: white; /* Color Texto: Blanco */
+    background-color: #6E6E6E; /* Color Fondo: Gris */
+    border: none;
+    border-radius: 20px; /* Bordes redondeados para simular el de la imagen */
+    padding: 10px 40px; /* Relleno interno para darle tamaño */
+    cursor: pointer; /* Indica que es clickeable */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra para darle profundidad */
+    transition: background-color 0.3s;
+}
+
+.boton1:hover {
+    background-color: #5a5a5a; /* Un color un poco más oscuro al pasar el ratón */
+}
